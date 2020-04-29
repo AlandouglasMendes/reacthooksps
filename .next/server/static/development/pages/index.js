@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -109,22 +109,43 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 const InputElement = () => {
-  return __jsx("input", {
-    placeholder: "alalala",
+  const {
+    0: inputText,
+    1: setInputText
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("");
+  return __jsx("div", {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4,
+      lineNumber: 8,
       columnNumber: 12
     }
-  });
+  }, __jsx("input", {
+    onChange: e => {
+      setInputText(e.target.value);
+    },
+    placeholder: "enter text here",
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 9
+    }
+  }), __jsx("br", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 44
+    }
+  }), inputText);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (InputElement);
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

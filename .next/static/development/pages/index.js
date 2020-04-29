@@ -52,22 +52,43 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 var InputElement = function InputElement() {
-  return __jsx("input", {
-    placeholder: "alalala",
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
+      inputText = _useState[0],
+      setInputText = _useState[1];
+
+  return __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4,
+      lineNumber: 8,
       columnNumber: 12
     }
-  });
+  }, __jsx("input", {
+    onChange: function onChange(e) {
+      setInputText(e.target.value);
+    },
+    placeholder: "enter text here",
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 9
+    }
+  }), __jsx("br", {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 44
+    }
+  }), inputText);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (InputElement);
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!**********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2Fhome%2Falandouglas%2FDesktop%2Fpluralsight%2Fmyapphooks%2Fpages%2Findex.js ***!
   \**********************************************************************************************************************************************/
@@ -90,5 +111,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
