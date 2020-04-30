@@ -63,7 +63,7 @@ var ImageChangeOnMouseOver = function ImageChangeOnMouseOver() {
       columnNumber: 9
     }
   }, __jsx("img", {
-    src: "./public/speakers/bw/Speaker-187.jpg",
+    src: "public/speakers/bw/Speaker-187.jpg",
     alt: "",
     __self: _this,
     __source: {
@@ -72,7 +72,7 @@ var ImageChangeOnMouseOver = function ImageChangeOnMouseOver() {
       columnNumber: 13
     }
   }), "\xA0\xA0\xA0", __jsx("img", {
-    src: "./public/speakers/bw/Speaker-823.jpg",
+    src: "public/speakers/bw/Speaker-823.jpg",
     alt: "",
     __self: _this,
     __source: {
