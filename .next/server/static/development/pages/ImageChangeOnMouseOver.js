@@ -117,7 +117,7 @@ const ImageChangeOnMouseOver = () => {
       columnNumber: 9
     }
   }, __jsx("img", {
-    src: "public/speakers/bw/Speaker-187.jpg",
+    src: "/speakers/bw/Speaker-187.jpg",
     alt: "",
     __self: undefined,
     __source: {
@@ -126,7 +126,7 @@ const ImageChangeOnMouseOver = () => {
       columnNumber: 13
     }
   }), "\xA0\xA0\xA0", __jsx("img", {
-    src: "public/speakers/bw/Speaker-823.jpg",
+    src: "/speakers/bw/Speaker-823.jpg",
     alt: "",
     __self: undefined,
     __source: {
@@ -134,14 +134,7 @@ const ImageChangeOnMouseOver = () => {
       lineNumber: 8,
       columnNumber: 13
     }
-  }), __jsx("p", {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9,
-      columnNumber: 13
-    }
-  }, "asdfad"));
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (ImageChangeOnMouseOver);
