@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -113,6 +113,10 @@ const InputElement = () => {
     0: inputText,
     1: setInputText
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("");
+  const {
+    0: historyList,
+    1: setHistoryList
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
   return __jsx("div", {
     __self: undefined,
     __source: {
@@ -123,6 +127,7 @@ const InputElement = () => {
   }, __jsx("input", {
     onChange: e => {
       setInputText(e.target.value);
+      setHistoryList([...historyList, e.target.value]);
     },
     placeholder: "enter text here",
     __self: undefined,
@@ -135,17 +140,47 @@ const InputElement = () => {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
+      lineNumber: 13,
       columnNumber: 44
     }
-  }), inputText);
+  }), inputText, " ", __jsx("her", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 21
+    }
+  }), __jsx("br", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 27
+    }
+  }), __jsx("ul", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15,
+      columnNumber: 9
+    }
+  }, historyList.map(rec => {
+    return __jsx("div", {
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17,
+        columnNumber: 24
+      }
+    }, rec);
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (InputElement);
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
