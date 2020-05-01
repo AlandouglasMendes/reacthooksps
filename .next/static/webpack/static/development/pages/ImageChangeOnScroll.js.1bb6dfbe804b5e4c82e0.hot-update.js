@@ -37,8 +37,8 @@ var ImageChangeOnScroll = function ImageChangeOnScroll() {
         columnNumber: 25
       }
     }, __jsx(_src_ImageTogglerOnScroll__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      primaryImage: "/speakers/bw/Speaker-".concat(speakerId, ".jpg"),
-      secondaryImage: "/speakers/Speaker-".concat(speakerId).jpg,
+      primaryImage: "/public/speakers/bw/Speaker-".concat(speakerId, ".jpg"),
+      secondaryImage: "/public/speakers/Speaker-".concat(speakerId).jpg,
       alt: "",
       __self: _this,
       __source: {
@@ -55,4 +55,4 @@ var ImageChangeOnScroll = function ImageChangeOnScroll() {
 /***/ })
 
 })
-//# sourceMappingURL=ImageChangeOnScroll.js.6fb090bfc83a6edb8ab7.hot-update.js.map
+//# sourceMappingURL=ImageChangeOnScroll.js.1bb6dfbe804b5e4c82e0.hot-update.js.map

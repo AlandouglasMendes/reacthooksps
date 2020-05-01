@@ -23,6 +23,7 @@ var ImageTogglerOnScroll = function ImageTogglerOnScroll(_ref) {
   var imageRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     window.addEventListener("scroll", scrollHandler);
+    setInView(isInView());
     return function () {
       window.removeEventListener("scroll", scrollHandler);
     };
@@ -54,7 +55,7 @@ var ImageTogglerOnScroll = function ImageTogglerOnScroll(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 32,
       columnNumber: 9
     }
   });
@@ -65,4 +66,4 @@ var ImageTogglerOnScroll = function ImageTogglerOnScroll(_ref) {
 /***/ })
 
 })
-//# sourceMappingURL=ImageChangeOnScroll.js.40eb52a397779a97efa7.hot-update.js.map
+//# sourceMappingURL=ImageChangeOnScroll.js.c067ba6aeeacf21c548d.hot-update.js.map

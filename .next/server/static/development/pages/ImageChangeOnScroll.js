@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -128,8 +128,8 @@ const ImageChangeOnScroll = () => {
         columnNumber: 25
       }
     }, __jsx(_src_ImageTogglerOnScroll__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      primaryImage: `/speakers/bw/Speaker-${speakerId}.jpg`,
-      secondaryImage: `/speakers/Speaker-${speakerId}`.jpg,
+      primaryImg: `/speakers/bw/Speaker-${speakerId}.jpg`,
+      secondaryImg: `/speakers/Speaker-${speakerId}.jpg`,
       alt: "",
       __self: undefined,
       __source: {
@@ -167,6 +167,7 @@ const ImageTogglerOnScroll = ({
   const imageRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     window.addEventListener("scroll", scrollHandler);
+    setInView(isInView());
     return () => {
       window.removeEventListener("scroll", scrollHandler);
     };
@@ -198,7 +199,7 @@ const ImageTogglerOnScroll = ({
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 32,
       columnNumber: 9
     }
   });
@@ -208,7 +209,7 @@ const ImageTogglerOnScroll = ({
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!********************************************!*\
   !*** multi ./pages/ImageChangeOnScroll.js ***!
   \********************************************/

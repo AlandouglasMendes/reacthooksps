@@ -74,8 +74,8 @@ var ImageChangeOnScroll = function ImageChangeOnScroll() {
         columnNumber: 25
       }
     }, __jsx(_src_ImageTogglerOnScroll__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      primaryImage: "/speakers/bw/Speaker-".concat(speakerId, ".jpg"),
-      secondaryImage: "/speakers/Speaker-".concat(speakerId).jpg,
+      primaryImg: "/speakers/bw/Speaker-".concat(speakerId, ".jpg"),
+      secondaryImg: "/speakers/Speaker-".concat(speakerId, ".jpg"),
       alt: "",
       __self: _this,
       __source: {
@@ -114,6 +114,7 @@ var ImageTogglerOnScroll = function ImageTogglerOnScroll(_ref) {
   var imageRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     window.addEventListener("scroll", scrollHandler);
+    setInView(isInView());
     return function () {
       window.removeEventListener("scroll", scrollHandler);
     };
@@ -145,7 +146,7 @@ var ImageTogglerOnScroll = function ImageTogglerOnScroll(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 32,
       columnNumber: 9
     }
   });
@@ -155,7 +156,7 @@ var ImageTogglerOnScroll = function ImageTogglerOnScroll(_ref) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 2:
 /*!*****************************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2FImageChangeOnScroll&absolutePagePath=%2Fhome%2Falandouglas%2FDesktop%2Fpluralsight%2Fmyapphooks%2Fpages%2FImageChangeOnScroll.js&hotRouterUpdates=true ***!
   \*****************************************************************************************************************************************************************************************************/
@@ -178,5 +179,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=ImageChangeOnScroll.js.map

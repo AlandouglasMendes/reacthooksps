@@ -6,6 +6,7 @@ const ImageTogglerOnScroll = ({primaryImg, secondaryImg}) =>{
 
     useEffect(()=>{
         window.addEventListener("scroll", scrollHandler);
+        setInView(isInView());
         return(()=>{
             window.removeEventListener("scroll", scrollHandler);
         });
@@ -16,7 +17,7 @@ const ImageTogglerOnScroll = ({primaryImg, secondaryImg}) =>{
     const isInView = () => {
         if(imageRef.current){
             const rect = imageRef.current.getBoundingClientRect();
-            return rect.top >=0 && rect.bottom <= window.innerHeight
+            return rect.top >=0 && rect.bottom <= window.innerHeight;
         }
         return false;
     };

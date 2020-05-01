@@ -28,7 +28,7 @@ var ImageChangeOnMouseOver = function ImageChangeOnMouseOver() {
       columnNumber: 9
     }
   }, __jsx(_src_ImageTogglerOnMouseOver__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    primaryImg: "/speakers/bw/Speaker-187.jpg",
+    primaryImg: "/public/speakers/bw/Speaker-187.jpg",
     secondaryImg: "/speakers/Speaker-187.jpg",
     alt: "",
     __self: _this,
@@ -38,7 +38,7 @@ var ImageChangeOnMouseOver = function ImageChangeOnMouseOver() {
       columnNumber: 13
     }
   }), "\xA0\xA0\xA0", __jsx(_src_ImageTogglerOnMouseOver__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    primaryImg: "/speakers/bw/Speaker-823.jpg",
+    primaryImg: "/public/speakers/bw/Speaker-823.jpg",
     secondaryImg: "/speakers/Speaker-823.jpg",
     alt: "",
     __self: _this,
@@ -55,4 +55,4 @@ var ImageChangeOnMouseOver = function ImageChangeOnMouseOver() {
 /***/ })
 
 })
-//# sourceMappingURL=ImageChangeOnMouseOver.js.9079a68636c210105cd0.hot-update.js.map
+//# sourceMappingURL=ImageChangeOnMouseOver.js.394c35a31f210c552f4b.hot-update.js.map
