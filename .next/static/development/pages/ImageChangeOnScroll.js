@@ -112,17 +112,23 @@ var ImageTogglerOnScroll = function ImageTogglerOnScroll(_ref) {
   var primaryImg = _ref.primaryImg,
       secondaryImg = _ref.secondaryImg;
   var imageRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true),
+      isLoading = _useState[0],
+      setIsLoading = _useState[1];
+
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     window.addEventListener("scroll", scrollHandler);
     setInView(isInView());
+    setIsLoading(false);
     return function () {
       window.removeEventListener("scroll", scrollHandler);
     };
   });
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
-      inView = _useState[0],
-      setInView = _useState[1];
+  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      inView = _useState2[0],
+      setInView = _useState2[1];
 
   var isInView = function isInView() {
     if (imageRef.current) {
@@ -139,14 +145,16 @@ var ImageTogglerOnScroll = function ImageTogglerOnScroll(_ref) {
     });
   };
 
-  return __jsx("img", {
+  return isLoading ? null : __jsx("img", {
     src: inView ? secondaryImg : primaryImg,
     alt: "",
     ref: imageRef,
+    height: "200",
+    width: "200",
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 33,
       columnNumber: 9
     }
   });
@@ -156,7 +164,7 @@ var ImageTogglerOnScroll = function ImageTogglerOnScroll(_ref) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!*****************************************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2FImageChangeOnScroll&absolutePagePath=%2Fhome%2Falandouglas%2FDesktop%2Fpluralsight%2Fmyapphooks%2Fpages%2FImageChangeOnScroll.js&hotRouterUpdates=true ***!
   \*****************************************************************************************************************************************************************************************************/
@@ -179,5 +187,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=ImageChangeOnScroll.js.map

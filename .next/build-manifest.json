@@ -10,10 +10,6 @@
     "static/development/_ssgManifest.js"
   ],
   "pages": {
-    "/ImageChangeOnMouseOver": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/ImageChangeOnScroll": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"

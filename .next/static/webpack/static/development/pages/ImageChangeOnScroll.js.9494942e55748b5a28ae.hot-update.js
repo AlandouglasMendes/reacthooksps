@@ -21,17 +21,23 @@ var ImageTogglerOnScroll = function ImageTogglerOnScroll(_ref) {
   var primaryImg = _ref.primaryImg,
       secondaryImg = _ref.secondaryImg;
   var imageRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true),
+      isLoading = _useState[0],
+      setIsLoading = _useState[1];
+
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     window.addEventListener("scroll", scrollHandler);
     setInView(isInView());
+    setIsLoading(false);
     return function () {
       window.removeEventListener("scroll", scrollHandler);
-    };
+    }, [isLoading];
   });
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
-      inView = _useState[0],
-      setInView = _useState[1];
+  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      inView = _useState2[0],
+      setInView = _useState2[1];
 
   var isInView = function isInView() {
     if (imageRef.current) {
@@ -48,14 +54,14 @@ var ImageTogglerOnScroll = function ImageTogglerOnScroll(_ref) {
     });
   };
 
-  return __jsx("img", {
+  return isLoading ? null : __jsx("img", {
     src: inView ? secondaryImg : primaryImg,
     alt: "",
     ref: imageRef,
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 33,
       columnNumber: 9
     }
   });
@@ -66,4 +72,4 @@ var ImageTogglerOnScroll = function ImageTogglerOnScroll(_ref) {
 /***/ })
 
 })
-//# sourceMappingURL=ImageChangeOnScroll.js.c067ba6aeeacf21c548d.hot-update.js.map
+//# sourceMappingURL=ImageChangeOnScroll.js.9494942e55748b5a28ae.hot-update.js.map

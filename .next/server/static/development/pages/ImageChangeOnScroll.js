@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -165,9 +165,14 @@ const ImageTogglerOnScroll = ({
   secondaryImg
 }) => {
   const imageRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+  const {
+    0: isLoading,
+    1: setIsLoading
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     window.addEventListener("scroll", scrollHandler);
     setInView(isInView());
+    setIsLoading(false);
     return () => {
       window.removeEventListener("scroll", scrollHandler);
     };
@@ -192,14 +197,16 @@ const ImageTogglerOnScroll = ({
     });
   };
 
-  return __jsx("img", {
+  return isLoading ? null : __jsx("img", {
     src: inView ? secondaryImg : primaryImg,
     alt: "",
     ref: imageRef,
+    height: "200",
+    width: "200",
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 33,
       columnNumber: 9
     }
   });
@@ -209,7 +216,7 @@ const ImageTogglerOnScroll = ({
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!********************************************!*\
   !*** multi ./pages/ImageChangeOnScroll.js ***!
   \********************************************/
