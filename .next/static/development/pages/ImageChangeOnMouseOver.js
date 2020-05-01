@@ -48,7 +48,7 @@ module.exports = (__webpack_require__(/*! dll-reference dll_2adc2403d89adc16ead0
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _src_ImageToggleOnMouseOver__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../src/ImageToggleOnMouseOver */ "./src/ImageToggleOnMouseOver.js");
+/* harmony import */ var _src_ImageTogglerOnMouseOver__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../src/ImageTogglerOnMouseOver */ "./src/ImageTogglerOnMouseOver.js");
 var _this = undefined,
     _jsxFileName = "/home/alandouglas/Desktop/pluralsight/myapphooks/pages/ImageChangeOnMouseOver.js";
 
@@ -64,7 +64,7 @@ var ImageChangeOnMouseOver = function ImageChangeOnMouseOver() {
       lineNumber: 6,
       columnNumber: 9
     }
-  }, __jsx(_src_ImageToggleOnMouseOver__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, __jsx(_src_ImageTogglerOnMouseOver__WEBPACK_IMPORTED_MODULE_1__["default"], {
     primaryImg: "/speakers/bw/Speaker-187.jpg",
     secondaryImg: "/speakers/Speaker-187.jpg",
     alt: "",
@@ -74,7 +74,7 @@ var ImageChangeOnMouseOver = function ImageChangeOnMouseOver() {
       lineNumber: 7,
       columnNumber: 13
     }
-  }), "\xA0\xA0\xA0", __jsx(_src_ImageToggleOnMouseOver__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }), "\xA0\xA0\xA0", __jsx(_src_ImageTogglerOnMouseOver__WEBPACK_IMPORTED_MODULE_1__["default"], {
     primaryImg: "/speakers/bw/Speaker-823.jpg",
     secondaryImg: "/speakers/Speaker-823.jpg",
     alt: "",
@@ -91,10 +91,10 @@ var ImageChangeOnMouseOver = function ImageChangeOnMouseOver() {
 
 /***/ }),
 
-/***/ "./src/ImageToggleOnMouseOver.js":
-/*!***************************************!*\
-  !*** ./src/ImageToggleOnMouseOver.js ***!
-  \***************************************/
+/***/ "./src/ImageTogglerOnMouseOver.js":
+/*!****************************************!*\
+  !*** ./src/ImageTogglerOnMouseOver.js ***!
+  \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -103,12 +103,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 var _this = undefined,
-    _jsxFileName = "/home/alandouglas/Desktop/pluralsight/myapphooks/src/ImageToggleOnMouseOver.js";
+    _jsxFileName = "/home/alandouglas/Desktop/pluralsight/myapphooks/src/ImageTogglerOnMouseOver.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-var ImageToggleOnMouseOver = function ImageToggleOnMouseOver(_ref) {
+var ImageTogglerOnMouseOver = function ImageTogglerOnMouseOver(_ref) {
   var primaryImg = _ref.primaryImg,
       secondaryImg = _ref.secondaryImg;
   var imageRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
@@ -131,7 +131,7 @@ var ImageToggleOnMouseOver = function ImageToggleOnMouseOver(_ref) {
   });
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (ImageToggleOnMouseOver);
+/* harmony default export */ __webpack_exports__["default"] = (ImageTogglerOnMouseOver);
 
 /***/ }),
 

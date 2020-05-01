@@ -88,15 +88,15 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./pages/ImageChangeOnMouseOver.js":
-/*!*****************************************!*\
-  !*** ./pages/ImageChangeOnMouseOver.js ***!
-  \*****************************************/
+/***/ "./pages/ImageChangeOnScroll.js":
+/*!**************************************!*\
+  !*** ./pages/ImageChangeOnScroll.js ***!
+  \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -104,13 +104,13 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _src_ImageTogglerOnMouseOver__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../src/ImageTogglerOnMouseOver */ "./src/ImageTogglerOnMouseOver.js");
-var _jsxFileName = "/home/alandouglas/Desktop/pluralsight/myapphooks/pages/ImageChangeOnMouseOver.js";
+/* harmony import */ var _src_ImageTogglerOnScroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../src/ImageTogglerOnScroll */ "./src/ImageTogglerOnScroll.js");
+var _jsxFileName = "/home/alandouglas/Desktop/pluralsight/myapphooks/pages/ImageChangeOnScroll.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-const ImageChangeOnMouseOver = () => {
+const ImageChangeOnScroll = () => {
   return __jsx("div", {
     __self: undefined,
     __source: {
@@ -118,37 +118,37 @@ const ImageChangeOnMouseOver = () => {
       lineNumber: 6,
       columnNumber: 9
     }
-  }, __jsx(_src_ImageTogglerOnMouseOver__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    primaryImg: "/speakers/bw/Speaker-187.jpg",
-    secondaryImg: "/speakers/Speaker-187.jpg",
-    alt: "",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7,
-      columnNumber: 13
-    }
-  }), "\xA0\xA0\xA0", __jsx(_src_ImageTogglerOnMouseOver__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    primaryImg: "/speakers/bw/Speaker-823.jpg",
-    secondaryImg: "/speakers/Speaker-823.jpg",
-    alt: "",
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9,
-      columnNumber: 13
-    }
+  }, [1124, 187, 823, 1269, 1530].map(speakerId => {
+    return __jsx("div", {
+      key: speakerId,
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8,
+        columnNumber: 25
+      }
+    }, __jsx(_src_ImageTogglerOnScroll__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      primaryImage: `/speakers/bw/Speaker-${speakerId}.jpg`,
+      secondaryImage: `/speakers/Speaker-${speakerId}`.jpg,
+      alt: "",
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9,
+        columnNumber: 21
+      }
+    }));
   }));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (ImageChangeOnMouseOver);
+/* harmony default export */ __webpack_exports__["default"] = (ImageChangeOnScroll);
 
 /***/ }),
 
-/***/ "./src/ImageTogglerOnMouseOver.js":
-/*!****************************************!*\
-  !*** ./src/ImageTogglerOnMouseOver.js ***!
-  \****************************************/
+/***/ "./src/ImageTogglerOnScroll.js":
+/*!*************************************!*\
+  !*** ./src/ImageTogglerOnScroll.js ***!
+  \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -156,46 +156,66 @@ const ImageChangeOnMouseOver = () => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "/home/alandouglas/Desktop/pluralsight/myapphooks/src/ImageTogglerOnMouseOver.js";
+var _jsxFileName = "/home/alandouglas/Desktop/pluralsight/myapphooks/src/ImageTogglerOnScroll.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-const ImageTogglerOnMouseOver = ({
+const ImageTogglerOnScroll = ({
   primaryImg,
   secondaryImg
 }) => {
   const imageRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    window.addEventListener("scroll", scrollHandler);
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  });
+  const {
+    0: inView,
+    1: setInView
+  } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+
+  const isInView = () => {
+    if (imageRef.current) {
+      const rect = imageRef.current.getBoundingClientRect();
+      return rect.top >= 0 && rect.bottom <= window.innerHeight;
+    }
+
+    return false;
+  };
+
+  const scrollHandler = () => {
+    setInView(() => {
+      return isInView();
+    });
+  };
+
   return __jsx("img", {
-    onMouseOver: () => {
-      imageRef.current.src = secondaryImg;
-    },
-    onMouseOut: () => {
-      imageRef.current.src = primaryImg;
-    },
-    src: primaryImg,
+    src: inView ? secondaryImg : primaryImg,
     alt: "",
     ref: imageRef,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6,
+      lineNumber: 31,
       columnNumber: 9
     }
   });
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (ImageTogglerOnMouseOver);
+/* harmony default export */ __webpack_exports__["default"] = (ImageTogglerOnScroll);
 
 /***/ }),
 
-/***/ 4:
-/*!***********************************************!*\
-  !*** multi ./pages/ImageChangeOnMouseOver.js ***!
-  \***********************************************/
+/***/ 5:
+/*!********************************************!*\
+  !*** multi ./pages/ImageChangeOnScroll.js ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/alandouglas/Desktop/pluralsight/myapphooks/pages/ImageChangeOnMouseOver.js */"./pages/ImageChangeOnMouseOver.js");
+module.exports = __webpack_require__(/*! /home/alandouglas/Desktop/pluralsight/myapphooks/pages/ImageChangeOnScroll.js */"./pages/ImageChangeOnScroll.js");
 
 
 /***/ }),
@@ -212,4 +232,4 @@ module.exports = require("react");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=ImageChangeOnMouseOver.js.map
+//# sourceMappingURL=ImageChangeOnScroll.js.map
